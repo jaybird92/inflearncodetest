@@ -18,15 +18,18 @@ public class problem4 {
         }
 
         for (int j = 0; j < length; j++) {
-            System.out.println(reverse(question[j]));
+//            System.out.println(reverse(question[j]));
+            new StringBuilder(question[j]).reverse().toString();
         }
 
     }
 
-    private static String reverse(String input) {
-        String answer = "";
+    private static StringBuilder reverse(String input) {
+//        String answer = "";
+        StringBuilder answer = new StringBuilder();
         for (int i = input.length()-1; i >= 0; i--) {
-            answer += input.charAt(i);
+//            answer += input.charAt(i);
+            answer.append(input.charAt(i));
         }
 
         return answer;

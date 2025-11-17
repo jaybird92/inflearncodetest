@@ -16,15 +16,17 @@ public class problem2 {
         System.out.println(changeCase(input));
     }
 
-    private static String changeCase(String input){
+    private static StringBuilder changeCase(String input){
 
-        String answer ="";
+//        String answer ="";
+        StringBuilder answer = new StringBuilder();
 
         for (int i = 0; i < input.length(); i++) {
             if (input.charAt(i) == Character.toLowerCase(input.charAt(i))) {
-                answer += String.valueOf(input.charAt(i)).toUpperCase();
+//                answer += String.valueOf(input.charAt(i)).toUpperCase();
+                answer.append(Character.toUpperCase(input.charAt(i)));
             } else {
-                answer += String.valueOf(input.charAt(i)).toLowerCase();
+                answer.append(Character.toLowerCase(input.charAt(i)));
             }
         }
 
